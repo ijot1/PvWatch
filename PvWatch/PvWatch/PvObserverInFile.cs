@@ -26,7 +26,7 @@ namespace PvWatch
                 }
                 else
                 {
-                    Console.WriteLine("The file name is not proper");
+                    throw new Exception($"The file name {fullFileName} is not proper");
                 }
             }
             else
@@ -68,7 +68,7 @@ namespace PvWatch
                 using (var reader = File.OpenText(fullFileName))
                 {
                     line = reader.ReadLine();
-                    while (line is object && line is not null)
+                    while (line is not null)
                     {
                         energyHourComponents.Add(float.Parse(line));
                         if (line.Trim() != "")
@@ -87,10 +87,7 @@ namespace PvWatch
             {
                 get
                 {
-                    string date = DateTime.Now.ToString();
-                    string __dateMark = date.Replace(' ', '_');
-                    string _dateMark = __dateMark.Replace(".", "_");
-                    string dateMark = _dateMark.Replace(":", "_");
+                    string dateMark = DateTime.Now.ToShortDateString();
 
                     return $"{dateMark} {FileFullName.partialName}";
                 }

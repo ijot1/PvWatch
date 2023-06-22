@@ -39,7 +39,7 @@ while (!CloseApp)
             break;
 
         default:
-            Console.WriteLine("Invalid operation\n");
+            Console.WriteLine($"Invalid argument: {choice}. Only 1, 2 or x are allowed");
             continue;
     }
 }
@@ -77,7 +77,7 @@ static void EnterData(IObserver observer)
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Exception catched: {e.Message}");
+                new Exception($"Exception catched: {e.Message}");
             }
         }
         else

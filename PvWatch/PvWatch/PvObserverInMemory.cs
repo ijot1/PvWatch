@@ -15,7 +15,7 @@
             
             else
             {
-                Console.WriteLine($"Quantity of energy should be not less than: " +
+                throw new Exception($"Quantity of energy should be not less than: " +
                     $"{minEnergyPerHour} and not more than: {maxEnergyPerHour}");
             }
             

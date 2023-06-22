@@ -30,7 +30,7 @@
             }
             else
             {
-                throw new Exception($"entered data is nor of float type: {energyPerHour}");
+                throw new Exception($"entered data is not of float type: {energyPerHour}");
             }
         }
         public abstract Statistics GetStatistics();
@@ -43,8 +43,7 @@
             if (statistics.Count != 0)
             {
                 Console.WriteLine("--------------------------------");
-                Console.WriteLine($"Production period in hours:   " +
-                    $"{statistics.Count}");
+                Console.WriteLine($"Production period in hours:   {statistics.Count}");
                 Console.WriteLine("--------------------------------");
                 Console.WriteLine($"Production of a day: {statistics.Sum,0:F2} [kWh]");
                 Console.WriteLine($"Production level:    {statistics.EnergyPerDayLevel}");

@@ -6,8 +6,6 @@
         public const float excessiveLevel = 45.0F;
 
         public delegate void LevelEvaluationDelegate(object sender, EventArgs args);
-        
-        
         public event LevelEvaluationDelegate LevelEvaluation;
 
         public float Min { get; private set; }
