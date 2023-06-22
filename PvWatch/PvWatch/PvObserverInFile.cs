@@ -88,7 +88,6 @@ namespace PvWatch
                 get
                 {
                     string dateMark = DateTime.Now.ToShortDateString();
-
                     return $"{dateMark} {FileFullName.partialName}";
                 }
             }
