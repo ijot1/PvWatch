@@ -1,7 +1,7 @@
 ﻿namespace PvWatch
 {
-    using static PvWatch.PvObserverBase;
-    using static PvWatch.Statistics;
+    //using static PvWatch.PvObserverBase;
+    //using static PvWatch.Statistics;
 
     public interface IObserver
     {
