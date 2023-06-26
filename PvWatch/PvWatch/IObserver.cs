@@ -1,8 +1,5 @@
 ﻿namespace PvWatch
 {
-    //using static PvWatch.PvObserverBase;
-    //using static PvWatch.Statistics;
-
     public interface IObserver
     {
         void AddEnergyPerHour(float energyPerHour);
